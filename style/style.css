@@ -30,7 +30,7 @@ body{
     background-color: #E5E5E5;
     font-family: 'Poppins', sans-serif;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1300px;
 }
 /* ---------------- Basic Css ends---------------- */
 /* ----------------Header section starts---------------- */
@@ -45,20 +45,26 @@ nav{
     align-items: center;
     background-color: var(--primary-color);
 }
-nav .right-side{
+nav .left-side{
     display: flex;
     gap: 15px;
     align-items: center;
 }
-.right-side .logo img{
+.left-side .logo img{
     width: 50px;
     height: 50px;
 }
-nav .left-side ul{
+nav .right-side ul{
     display: flex;
     gap: 35px;
     align-items: center;
+    font-size: 20px;
+    
 }
+nav ul li a, .fa-bars{
+    color:  #FFFFFF;
+}
+
 /* ----------------Header section ends---------------- */
 /* ----------------Top player section starts---------------- */
 .top, .latest{
@@ -159,6 +165,17 @@ hr{
 /* ----------------Latest course section ends---------------- */
 /* ----------------media query section starts---------------- */
 @media only screen and (max-width: 767px) {
+    body{
+        max-width: 700px;
+    }
+    /* Navbar section starts  */
+    nav{
+        margin: 0 20px;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    /* Navbar section ends  */
     /* top-player section starts  */
     .section-title{
         text-align: center;
@@ -166,9 +183,13 @@ hr{
     .top-players .container{
         grid-template-columns: repeat(2, 1fr);
     }
+    
     .player, .blog, .latest .courses{
         flex-direction: column;
         row-gap: 10px;
+    }
+    .player .img{
+        width: 50%;
     }
     /* top-player section ends  */
     /* top-blogs section starts  */
@@ -183,6 +204,11 @@ hr{
     /* Latest section ends */
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Navbar section starts  */
+    .fa-bars{
+        display: none;
+    }
+    /* Navbar section end  */
     .section-title{
         text-align: center;
     }
@@ -216,6 +242,10 @@ hr{
     /* Latest section ends */
 }
 @media only screen and (min-width: 1024px) {
-    
+    /* Navbar section starts  */
+    .fa-bars{
+        display: none;
+    }
+    /* Navbar section ends  */
 }
 /* ----------------media query section ends---------------- */
