@@ -171,9 +171,24 @@ hr{
     /* Navbar section starts  */
     nav{
         margin: 0 20px;
+        justify-content: space-between;
     }
-    nav ul{
-        flex-direction: column;
+    
+
+    nav ul.list{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background-color: var(--primary-color);
+        width: 50%;
+        transform: translateX(-100%);
+        transition: all 2s ease-out !important;
+    }
+    .side-menu:checked ~ ul.list{
+        transform: translateX(0);
+        background-color: #9F9F9F;
     }
     /* Navbar section ends  */
     /* top-player section starts  */
@@ -202,6 +217,7 @@ hr{
         width: 100%;
     }
     /* Latest section ends */
+    
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     /* Navbar section starts  */
